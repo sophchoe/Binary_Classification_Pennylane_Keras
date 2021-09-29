@@ -3,7 +3,7 @@ Classical-Quantum hybrid model for credit card fraud detection
 
 This code is a Keras-Pennylane implementation of the "Supervised quantum neural networks" proposed in "Continuous-variable quantum neural networks". https://arxiv.org/pdf/1806.06871v1.pdf
 
-The data is a record of genuine and fraudulent credit card activities consisting of    records. The fraudulent activities are only %. The paper creates synthetic fraudulent data, to have genuine vs fraudulent ratio to be 3:1. I selected genuine data of the same ratio, creating a dataset of 1,968 samples.
+The data is a record of genuine and fraudulent credit card transactions consisting of 284,806 records, out of which fraudulent transactions are only 492. The paper creates synthetic fraudulent data, to have genuine vs fraudulent ratio to be 3:1. I selected genuine data of the same ratio, creating a dataset of 1,968 samples. Additionally, the paper suggests selecting only 10 features out of 29. The csv file in the folder contains 1,968 samples with 10 features and label.
 
 The proposed classical-quantum hybrid model had two hidden layers, outputs a vector of length 14, encodes it in quantum state using various quantum gates, performs quantum computation using quantum layers. 
 
