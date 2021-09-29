@@ -12,7 +12,7 @@ The proposed classical-quantum hybrid model had two hidden layers, outputs a vec
 I made a slight modification to the cost function of the paper, since Pennylane does not support state vector extraction yet.
 
 The data flow of the code is
-- Prepare data using Pandas, Scikit-learn, and convert to Tensorflow tensors.
+- Prepare data using Pandas, Scikit-learn, and convert to Tensorflow tensors. One-hot encoding is used for labels.
 - Define classical layers 
   - 2 hidden layers with 10 neurons
   - output layer with 14 neurons
@@ -22,7 +22,7 @@ The data flow of the code is
   - Displacement gate
   - Kerr gate
 - Define quantum layers (initialize the parameters to be optimized)
-- Create a Pennylane quantum circuit
+- Create a Pennylane quantum circuit. The measurement returns a 2-dimensional vector to match the one-hot encoded labels.
 - Create a hybrid Keras model (Pennylane plug-in converts the quantum layers as a Keras layer)
 - Train using Keras loss function and optimizer
 
