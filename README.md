@@ -26,4 +26,4 @@ The data flow of the code is
 - Create a hybrid Keras model (Pennylane plug-in converts the quantum layers as a Keras layer)
 - Train using Keras loss function and optimizer
 
-The paper suggests cutoff dimension 10. That would be a better approximation of the overall resulting quantum state. However cutoff dimension of only 2 is giving a good result as well. Experimenting with different cutoff dimension is encouraged.
+The paper suggests cutoff dimension 10. That would be a better approximation of the overall resulting quantum state. However the cutoff dimension of only 2 is giving a good result as well. Experimenting with different cutoff dimension is encouraged.
