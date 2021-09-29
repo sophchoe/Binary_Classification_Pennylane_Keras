@@ -9,7 +9,7 @@ The proposed classical-quantum hybrid model had two hidden layers, outputs a vec
 
 <img width="500" alt="fraud)model" src="https://user-images.githubusercontent.com/22792633/135196338-48f08a90-64c0-47f4-b72c-e460f7c7c06f.png">
 
-I made a slight modification to the cost function of the paper, since Pennylane does not support state vector extraction yet.
+I am using the mean square error, which is not true to the cost function of the paper. It is due to the fact Pennylane does not support state vector extraction yet.
 
 The data flow of the code is
 - Prepare data using Pandas, Scikit-learn, and convert to Tensorflow tensors. One-hot encoding is used for labels.
