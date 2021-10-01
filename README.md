@@ -18,7 +18,7 @@ The proposed classical-quantum hybrid model had two hidden layers, outputs a vec
 I am using the mean square error, which is not true to the cost function of the paper. It is due to the fact Pennylane does not support state vector extraction yet.
 
 ## Qauntum state encoding
-As per Schuld's paper, quantum computing can be viewed as a kernel method. Then what sets an algorithm apart is the original data encoding. One way of encoding classical data into quantum states is using the entries of each vector as parameters of available quantum gates. Photonic qunatum computing provides a rich way to encode data with 
+As per Schuld's paper "Supervised quantum machine learning models are kernel methods", quantum ML model can be viewed as a kernel method, a way of mapping data into a higher dimensional Hilbert space. https://arxiv.org/pdf/2101.11020.pdf Then what sets an algorithm apart is the classical data encoding into quantum states. One way of encoding is using the entries of each vector as parameters of available quantum gates. Photonic qunatum computing provides a rich way to encode data with its linear and nonlinear gates:
   - Squeezing gate
   - Interferometer (composed of beam splitter and rotation gates)
   - Displacement gate
