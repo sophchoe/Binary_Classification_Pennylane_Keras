@@ -17,16 +17,19 @@ The proposed classical-quantum hybrid model had two hidden layers, outputs a vec
 
 I am using the mean square error, which is not true to the cost function of the paper. It is due to the fact Pennylane does not support state vector extraction yet.
 
+## Qauntum state encoding
+As per Schuld's paper, quantum computing can be viewed as a kernel method. Then what sets an algorithm apart is the original data encoding. One way of encoding classical data into quantum states is using the entries of each vector as parameters of available quantum gates. Photonic qunatum computing provides a rich way to encode data with 
+  - Squeezing gate
+  - Interferometer (composed of beam splitter and rotation gates)
+  - Displacement gate
+  - Kerr gate
+ 
 ## Dataflow
 - Prepare data using Pandas, Scikit-learn, and convert to Tensorflow tensors. One-hot encoding is used for labels.
 - Define classical layers 
   - 2 hidden layers with 10 neurons
   - output layer with 14 neurons
 - Encode the output of the classical layers in quantum state, using
-  - Squeezing gate
-  - Interferometer (composed of beam splitter and rotation gates)
-  - Displacement gate
-  - Kerr gate
 - Define quantum layers (initialize the parameters to be optimized)
 - Create a Pennylane quantum circuit. The measurement returns a 2-dimensional vector to match the one-hot encoded labels.
 - Create a hybrid Keras model (Pennylane plug-in converts the quantum layers as a Keras layer)
