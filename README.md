@@ -5,7 +5,7 @@ Binary classification of genuine vs fraudulent credit card transactions using cl
 This code is a Keras-Pennylane implementation of the "Supervised quantum neural networks" proposed in "Continuous-variable quantum neural networks". https://arxiv.org/pdf/1806.06871v1.pdf The original implementation using Strawberry Fields and Tensorflow is found here. https://github.com/XanaduAI/quantum-neural-networks/blob/master/fraud_detection/fraud_detection.py Thanks to Pennylane Tensorflow plug-in, we can easily convert quantum circuits into Keras layers and use Keras's built in loss and optimizer functions.
 
 ## Dataset
-The data is a record of 284,806 genuine and fraudulent credit card transactions. Each transaction is respresented by 29 features. The modifications to the original data are:
+The original dataset is a record of 284,806 genuine and fraudulent credit card transactions. Each transaction is respresented by 29 features. The modifications to the original data are:
  - The truncated dataset contains 1,968 samples: 492 faudulent and 1,476 sampled genuine transactions. The ratio is balanced to 1:3.
  - The 29 features are ordered based on Principal Component Analysis, hece the paper suggests selecting only 10.
  - The resulting csv file in the folder contains 1,968 samples with 10 features and label.
