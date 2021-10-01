@@ -29,10 +29,10 @@ As per Schuld's paper, quantum computing can be viewed as a kernel method. Then 
 - Define classical layers 
   - 2 hidden layers with 10 neurons
   - output layer with 14 neurons
-- Encode the output of the classical layers in quantum state, using
+- Encode the output of the classical layers in quantum state using the output of the classical layer as the parameters of quantum gates.
 - Define quantum layers (initialize the parameters to be optimized)
 - Create a Pennylane quantum circuit. The measurement returns a 2-dimensional vector to match the one-hot encoded labels.
-- Create a hybrid Keras model (Pennylane plug-in converts the quantum layers as a Keras layer)
+- Create a hybrid Keras model (Pennylane plug-in converts the quantum layers as Keras layers)
 - Train using Keras loss function and optimizer
 
 The paper suggests cutoff dimension 10. That would be a better approximation of the overall resulting quantum state. However the cutoff dimension of only 2 is giving a good result as well. Experimenting with different cutoff dimension is encouraged.
