@@ -6,7 +6,7 @@ This code is a Keras-Pennylane implementation of the "Supervised quantum neural 
 
 ## Dataset
 The data is a record of 284,806 genuine and fraudulent credit card transactions. Each transaction is respresented by 29 features. The modifications to the original data are:
- - Fraudulent transactions are only 492. I resample the data to have the genuine vs fraudulent ratio to be 3:1, 1,476:492. 
+ - The truncated dataset contains 1,968 samples: 492 faudulent transactions and 1,476 sampled genuine transaction. Now the ratio is balanced to 1:3.
  - The features are ordered based on Principal Component Analysis (in the order of importance), hece the paper suggests selecting only 10.
  - The resulting csv file in the folder contains 1,968 samples with 10 features and label.
 
