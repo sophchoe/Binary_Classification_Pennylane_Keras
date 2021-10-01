@@ -17,7 +17,7 @@ The proposed classical-quantum hybrid model had two hidden layers, outputs a vec
 
 I am using the mean square error, which is not true to the cost function of the paper. It is due to the fact Pennylane does not support state vector extraction yet.
 
-The data flow of the code is
+## Dataflow
 - Prepare data using Pandas, Scikit-learn, and convert to Tensorflow tensors. One-hot encoding is used for labels.
 - Define classical layers 
   - 2 hidden layers with 10 neurons
