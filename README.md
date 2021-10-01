@@ -1,7 +1,7 @@
 # Fraud Detection
 Binary classification of genuine vs fraudulent for credit card transactions using classical-quantum hybrid model. 
 
-## Code
+### Code
 This code is a Keras-Pennylane implementation of the "Supervised quantum neural networks" proposed in "Continuous-variable quantum neural networks". https://arxiv.org/pdf/1806.06871v1.pdf The original implementation using Strawberry Fields and Tensorflow is found here. https://github.com/XanaduAI/quantum-neural-networks/blob/master/fraud_detection/fraud_detection.py Thanks to Pennylane Tensorflow plug-in, we can easily convert quantum circuits into Keras layers and use Keras's built in loss and optimizer functions.
 
 ## Dataset
@@ -10,7 +10,7 @@ The data is a record of 284,806 genuine and fraudulent credit card transactions.
  - The features are ordered based on Principal Component Analysis (in the order of importance), hece the paper suggests selecting only 10.
  - The resulting csv file in the folder contains 1,968 samples with 10 features and label.
 
-As per 
+### Architecture
 The proposed classical-quantum hybrid model had two hidden layers, outputs a vector of length 14, encodes it in quantum state using various quantum gates, performs quantum computation using quantum layers. 
 
 <img width="500" alt="fraud)model" src="https://user-images.githubusercontent.com/22792633/135196338-48f08a90-64c0-47f4-b72c-e460f7c7c06f.png">
