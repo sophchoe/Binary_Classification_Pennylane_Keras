@@ -1,9 +1,9 @@
-# Binary_Classification_Pennylane_Keras
-Classical-Quantum hybrid model for credit card fraud detection
+# Fraud Detection
+Binary classification of genuine vs fraudulent for credit card transactions. 
 
-This code is a Keras-Pennylane implementation of the "Supervised quantum neural networks" proposed in "Continuous-variable quantum neural networks". https://arxiv.org/pdf/1806.06871v1.pdf
+This code is a Keras-Pennylane implementation of the "Supervised quantum neural networks" proposed in "Continuous-variable quantum neural networks". https://arxiv.org/pdf/1806.06871v1.pdf The original implementation using Strawberry Fields and Tensorflow is found here. https://github.com/XanaduAI/quantum-neural-networks/blob/master/fraud_detection/fraud_detection.py Thanks to Pennylane Tensorflow plug-in, we can easily convert quantum circuits into Keras layers and use Keras's built in loss and optimizer functions.
 
-The data is a record of genuine and fraudulent credit card transactions consisting of 284,806 records, out of which fraudulent transactions are only 492. The paper creates synthetic fraudulent data, to have genuine vs fraudulent ratio to be 3:1. I selected genuine data of the same ratio, creating a dataset of 1,968 samples. Additionally, the paper suggests selecting only 10 features out of 29. The csv file in the folder contains 1,968 samples with 10 features and label.
+The data is a record of genuine and fraudulent credit card transactions consisting of 284,806 records, out of which fraudulent transactions are only 492. Since the data composition is highly skewed, we resample the data to have the genuine vs fraudulent ratio to be 3:1. The newly saved data file contains 1476 genuine transactions and 492 fraudulent transaction.  1,968 samples. Additionally, the paper suggests selecting only 10 features out of 29. The csv file in the folder contains 1,968 samples with 10 features and label.
 
 The proposed classical-quantum hybrid model had two hidden layers, outputs a vector of length 14, encodes it in quantum state using various quantum gates, performs quantum computation using quantum layers. 
 
